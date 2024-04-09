@@ -17,8 +17,8 @@ class UCM {
       this.ifrm.setAttribute("allow", "fullscreen");
       this.ifrm.setAttribute("allowtransparency", true);
       this.ifrm.setAttribute("scrolling", "no");
-      this.ifrm.style.width = "300px";
-      this.ifrm.style.height = "300px";
+      this.ifrm.style.width = "419px";
+      this.ifrm.style.height = "475px";
       this.ifrm.style.borderWidth = "0px";
       container.appendChild(this.ifrm);
     }
