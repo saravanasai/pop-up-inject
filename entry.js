@@ -35,6 +35,3 @@ class UCM {
     }
   }
   
-  let ucm = new UCM({elementId:'sso'})
-
-  ucm.init()
