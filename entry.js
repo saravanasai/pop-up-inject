@@ -12,7 +12,7 @@ class UCM {
   
     prepareFrame(elementIdToAttachPopup) {
       let container = document.getElementById(`${elementIdToAttachPopup}`);
-      this.ifrm.setAttribute("src", "http://localhost:5173/");
+      this.ifrm.setAttribute("src", "http://app-switcher.test/");
       this.ifrm.setAttribute("allowfullscreen", true);
       this.ifrm.setAttribute("allow", "fullscreen");
       this.ifrm.setAttribute("allowtransparency", true);
