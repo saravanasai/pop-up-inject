@@ -33,6 +33,7 @@ class UCM {
   prepareFrame(top, left) {
     const styleEl = document.createElement("style");
     styleEl.append(this.css);
+    this.container.append(styleEl);
     this.ifrm.setAttribute("src", "http://app-switcher.test/");
     this.ifrm.setAttribute("allowfullscreen", true);
     this.ifrm.setAttribute("allow", "fullscreen");
