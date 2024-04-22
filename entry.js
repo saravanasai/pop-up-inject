@@ -2,9 +2,8 @@ class UCM {
   constructor(config) {
     this.configuration = config;
     this.ifrm = document.createElement("iframe");
-    this.container = document.createElement("div");
     this.css =
-      ".app-swicther-popup{z-index: 100000000 !important;}.show {display: block;}.hide {display: none;}";
+      ".app-swicther-popup{background:white;border:0;position:fixed;z-index:10000000;}.show {display: block;}.hide {display: none;} iframe {border:none;}";
   }
 
   init() {
@@ -33,21 +32,20 @@ class UCM {
   prepareFrame(top, left) {
     const styleEl = document.createElement("style");
     styleEl.append(this.css);
-    this.container.append(styleEl);
-    this.ifrm.setAttribute("src", "http://app-switcher.test/");
+    this.ifrm.setAttribute("src", "https://app-switcher.test/");
     this.ifrm.setAttribute("allowfullscreen", true);
     this.ifrm.setAttribute("allow", "fullscreen");
-    this.ifrm.setAttribute("allowtransparency", true);
     this.ifrm.setAttribute("scrolling", "no");
-    this.ifrm.style.width = "425px";
+    this.ifrm.style.width = "421px";
     this.ifrm.style.height = "500px";
-    this.ifrm.style.position = "absolute";
     this.ifrm.style.top = top + "px";
     this.ifrm.style.left = left + "px";
     this.ifrm.style.borderWidth = "0px";
-    this.ifrm.setAttribute("class", "app-swicther-popup hide");
-    this.container.appendChild(this.ifrm);
-    document.body.appendChild(this.container);
+    this.ifrm.style.borderRadius = "4px";
+    this.ifrm.classList.add("app-swicther-popup");
+    this.ifrm.classList.add("hide");
+    document.body.appendChild(styleEl);
+    document.body.appendChild(this.ifrm);
   }
 
   show() {
